@@ -25,9 +25,9 @@ export default defineConfig({
       registerType: 'autoUpdate',
       injectRegister: 'inline',
       manifest: {
-        name: 'Gemini Pro Chat',
-        short_name: 'Gemini Pro',
-        description: 'Minimal web UI for Gemini Pro.',
+        name: 'Todo app',
+        short_name: 'Todo',
+        description: 'Minimal web UI for Todo',
         theme_color: '#212129',
         background_color: '#ffffff',
         icons: [

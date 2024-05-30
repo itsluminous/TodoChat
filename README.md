@@ -1,7 +1,5 @@
 # GeminiProChat
 
-English | [中文](README_cn.md) | [Italiano](README_it.md) | [日本語](README_jp.md)
-
 Minimal web UI for Gemini Pro Chat.
 
 Live demo: [Gemini Pro Chat](https://www.geminiprochat.com)

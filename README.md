@@ -1,6 +1,6 @@
-# GeminiProChat
+# TodoChat
 
-Minimal web UI for Gemini Pro Chat.
+Minimal web UI for Gemini Pro Chat, hidden behind a Todo app.
 
 Live demo: [Gemini Pro Chat](https://todo-list-seven-teal.vercel.app/)
 
@@ -8,7 +8,7 @@ Live demo: [Gemini Pro Chat](https://todo-list-seven-teal.vercel.app/)
 
 ### Deploy With Vercel(Recommended)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/itsluminous/GeminiProChat&env=GEMINI_API_KEY&envDescription=Google%20API%20Key%20for%20GeminiProChat&envLink=https://makersuite.google.com/app/apikey&project-name=gemini-pro-chat&repository-name=gemini-pro-chat&demo-title=Gemini%20Pro%20Chat&demo-description=Minimal%20web%20UI%20for%20Gemini%20Pro.&demo-url=https%3A%2F%2Fgeminiprochat.com&demo-image=https%3A%2F%2Fgeminiprochat.com%2Ficon.svg)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/itsluminous/TodoChat&env=GEMINI_API_KEY&envDescription=Google%20API%20Key%20for%20GeminiProChat&envLink=https://makersuite.google.com/app/apikey&project-name=gemini-pro-chat&repository-name=gemini-pro-chat&demo-title=Gemini%20Pro%20Chat&demo-description=Minimal%20web%20UI%20for%20Gemini%20Pro.&demo-url=https%3A%2F%2Fgeminiprochat.com&demo-image=https%3A%2F%2Fgeminiprochat.com%2Ficon.svg&env=TODO_SECRET&envDescription=%20AND%20Your%20secret%20Todo%20Item%20to%20switch%20to%20chat)
 
 Just click the button above and follow the instructions to deploy your own copy of the app.
 
@@ -40,16 +40,17 @@ Just click the button above and follow the instructions to deploy on Zeabur.
 To deploy with Docker, you can use the following command:
 
 ```bash
-docker run --name geminiprochat \
+docker run --name todochat \
 --restart always \
 -p 3000:3000 \
 -itd \
 -e GEMINI_API_KEY=your_api_key_here \
-itsluminous/geminiprochat:latest
+-e TODO_SECRET=your_todo_secret_here \
+itsluminous/todochat:latest
 ```
 Please make sure to replace `your_api_key_here` with your own GEMINI API key.
 
-This will start the **geminiprochat** service, accessible at `http://localhost:3000`. 
+This will start the **todochat** service, accessible at `http://localhost:3000`. 
 
 ## Environment Variables
 
@@ -58,7 +59,8 @@ You can control the website through environment variables.
 | Name | Description | Required |
 | --- | --- | --- |
 | `GEMINI_API_KEY` | Your API Key for GEMINI. You can get it from [here](https://makersuite.google.com/app/apikey).| **✔** |
-| `API_BASE_URL` | Custom base url for GEMINI API. Click [here](https://github.com/itsluminous/GeminiProChat?tab=readme-ov-file#solution-for-user-location-is-not-supported-for-the-api-use) to see when to use this. | ❌ |
+| `TODO_SECRET` | Your secret todo item to switch from todo to chat.| **✔** |
+| `API_BASE_URL` | Custom base url for GEMINI API. Click [here](https://github.com/itsluminous/TodoChat?tab=readme-ov-file#solution-for-user-location-is-not-supported-for-the-api-use) to see when to use this. | ❌ |
 | `HEAD_SCRIPTS` | Inject analytics or other scripts before `</head>` of the page | ❌ |
 | `PUBLIC_SECRET_KEY` | Secret string for the project. Use for generating signatures for API calls | ❌ |
 | `SITE_PASSWORD` | Set password for site, support multiple password separated by comma. If not set, site will be public | ❌ |
@@ -88,11 +90,9 @@ You can control the website through environment variables.
     pnpm install
    ```
 
-2. Copy the `.env.example` file, then rename it to `.env`, and add your [`GEMINI_API_KEY`](https://makersuite.google.com/app/apikey) to the `.env` file.
-
-   ```bash
-    GEMINI_API_KEY=AIzaSy...
-   ```
+2. Copy the `.env.example` file, then rename it to `.env`, and 
+- add your [`GEMINI_API_KEY`](https://makersuite.google.com/app/apikey) to the `.env` file. ``GEMINI_API_KEY=AIzaSy...``
+- add your `TODO_SECRET` to the `.env` file. ``TODO_SECRET=avacadoes``
 
 3. Run the application, the local project runs on `http://localhost:3000/`.
 

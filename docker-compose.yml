@@ -1,14 +1,15 @@
 version: '3'
 
 services:
-  geminiprochat:
+  todochat:
     build: .
-    container_name: geminiprochat
+    container_name: todochat
     restart: always
     ports:
       - "3000:3000"
     environment:
       - GEMINI_API_KEY=YOUR_GEMINI_API_KEY
+      - TODO_SECRET=YOUR_TODO_SECRET
       # - HTTPS_PROXY=YOUR_HTTPS_PROXY
       # - API_BASE_URL=YOUR_GEMINI_API_BASE_URL
       # - HEAD_SCRIPTS=YOUR_HEAD_SCRIPTS

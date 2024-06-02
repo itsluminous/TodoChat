@@ -14,9 +14,12 @@ public_secret_key=$PUBLIC_SECRET_KEY
 site_password=$SITE_PASSWORD
 # ID of the model to use. https://platform.openai.com/docs/api-reference/models/list
 openai_api_model=$OPENAI_API_MODEL
+# Your secret key to switch from todo item to gemini chat
+todo_key=$TODO_SECRET
 
 for file in $(find ./dist -type f -name "*.mjs"); do
   sed "s|({}).GEMINI_API_KEY|\"$gemini_api_key\"|g;
+  s|({}).TODO_SECRET|\"$todo_key\"|g;
   s|({}).HTTPS_PROXY|\"$https_proxy\"|g;
   s|({}).API_BASE_URL|\"$api_base_url\"|g;
   s|({}).HEAD_SCRIPTS|\"$head_scripts\"|g;

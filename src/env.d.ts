@@ -9,6 +9,7 @@ interface ImportMetaEnv {
   readonly SITE_PASSWORD: string
   readonly OPENAI_API_MODEL: string
   readonly PUBLIC_MAX_HISTORY_MESSAGES: string
+  readonly TODO_SECRET: string
 }
 
 interface ImportMeta {

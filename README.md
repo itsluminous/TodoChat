@@ -1,6 +1,6 @@
 # TodoChat
 
-Minimal web UI for Gemini Pro Chat, hidden behind a Todo app.
+Minimal web UI for Gemini Pro Chat, hidden behind a Todo app to avoid censorship.
 
 Live demo: [Todo Chat](https://todo-list-seven-teal.vercel.app/)
 

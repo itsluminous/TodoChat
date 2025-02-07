@@ -4,6 +4,8 @@ Minimal web UI for Gemini Pro Chat, hidden behind a Todo app.
 
 Live demo: [Todo Chat](https://todo-list-seven-teal.vercel.app/)
 
+![Demo](https://github.com/user-attachments/assets/c8864350-b3a5-4a80-a464-d5d8a10a60d6)
+
 ## Deploy
 
 ### Deploy With Vercel(Recommended)
